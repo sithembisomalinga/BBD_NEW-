@@ -4,7 +4,7 @@ Feature: Itinerary search
   Background: order search
     Given a user is on the home page
     When  a user navigates to the Login page using "https://adactinhotelapp.com/"
-    And a user enter "Phanuel24" and "12345678"
+    And a user enter "sthembiso16" and "3755RP"
     And a user clicks the login button
 
     Scenario: Order search successful

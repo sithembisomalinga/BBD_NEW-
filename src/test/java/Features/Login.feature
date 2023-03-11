@@ -10,4 +10,4 @@ Feature: Login
 
     Examples:
       | URL                          | username  | password |
-      | https://adactinhotelapp.com/ | Phanuel24 | 12345678 |
+      | https://adactinhotelapp.com/ | sthembiso16 | 3755RP |

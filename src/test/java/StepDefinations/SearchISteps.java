@@ -10,13 +10,12 @@ import org.openqa.selenium.By;
 
 public class SearchISteps extends BaseTest {
 
-
     ExtentReports extent;
     ExtentTest test;
 
     @And("a user navigate to the Booked Itinerary")
     public void aUserNavigateToTheBookedItinerary() throws InterruptedException {
-        extent = getReportObject("\\reports\\search-report.html");
+        extent = getReportObject("\\reports\\search.html");
         test = extent.createTest("Order Search");
         driver.findElement(By.xpath("//a[@href='BookedItinerary.php']")).click();
     }
@@ -31,10 +30,10 @@ public class SearchISteps extends BaseTest {
     @Then("order is displayed successfully")
     public void orderIsDisplayedSuccessfully() {
         if (!driver.findElement(By.id("search_result_error")).isDisplayed()) {
-            test.fail("Itinerary searched failed").addScreenCaptureFromPath("screenshot.png");;
+            test.fail("Itinerary failed!").addScreenCaptureFromPath("screenshot.png");;
             Assert.fail();
         } else {
-            test.pass("Itinerary search passed");
+            test.pass("Itinerary passed!");
         }
         closeDriver();
         extent.flush();

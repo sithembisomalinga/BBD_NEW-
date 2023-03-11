@@ -4,7 +4,7 @@ Feature: Hotel Booking
   Background:
     Given a user is on the home page
     When  a user navigates to the Login page using "https://adactinhotelapp.com/"
-    And a user enter "Phanuel24" and "12345678"
+    And a user enter "sthembiso16" and "3755RP"
     And a user clicks the login button
 
   Scenario Outline: Booking successful
@@ -18,7 +18,7 @@ Feature: Hotel Booking
 
     Examples:
       | firstname | lastname | address | cardNumber       | cardType | expiryMonth | expiryYear | cvvNumber | checkInDate | checkOutDate |
-      | Peter     | dayne    | Tembisa | 4578196783548219 | VISA     | March       | 2022       | 978       | 06/03/2022  | 08/03/2022   |
+      | Sithembiso     | Kubheka    | Midrand | 1111111111111111 | VISA     | June       | 2022       | 111       | 06/03/2022  | 08/03/2022   |
 
   Scenario Outline: Booking unsuccessful
     And a user fill in search form with details including "<checkInDate>" and "<checkOutDate>"
@@ -32,4 +32,4 @@ Feature: Hotel Booking
 
     Examples:
       | firstname | lastname | address | cardNumber  | cardType | expiryMonth | expiryYear | cvvNumber | checkInDate | checkOutDate |
-      | John      | dervin   | Soweto  | 57819678354 | VISA     | March       | 2022       | 978       | 06/03/2022  | 08/03/2022   |
+      | Lionel      | Messi   | Sandton  | 22222222222 | VISA     | June      | 2022       | 222       | 06/03/2022  | 08/03/2022   |

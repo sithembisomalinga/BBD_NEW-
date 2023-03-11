@@ -89,10 +89,10 @@ public class BookSteps extends BaseTest {
         driver.findElement(By.id("cc_num")).sendKeys(cardNumber);
 
         if (cardNumber.length() < 16) {
-            extent = getReportObject("\\reports\\unsuccessful-booking-report.html");
+            extent = getReportObject("\\reports\\unsuccessful_ooking.html");
             test = extent.createTest("Booking error validation");
         } else {
-            extent = getReportObject("\\reports\\successful-booking-report.html");
+            extent = getReportObject("\\reports\\successful_booking.html");
             test = extent.createTest("Booking");
         }
 
@@ -136,10 +136,10 @@ public class BookSteps extends BaseTest {
     public void aUserBookingIsUnsuccessful() {
 
         if (!driver.findElement(By.id("cc_num_span")).isDisplayed()) {
-            test.fail("Booking error validation failed").addScreenCaptureFromPath("screenshot.png");;
+            test.fail("Booking failed!").addScreenCaptureFromPath("screenshot.png");;
             Assert.fail();
         } else {
-            test.pass("Booking error validation passed");
+            test.pass("Booking passed!");
         }
         closeDriver();
         extent.flush();
